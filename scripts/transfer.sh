@@ -1,6 +1,6 @@
 #!/bin/bash
 # Auto-transfer script for syspro2023 bare-metal part
-# Written by PENG AO
+# Written by PENG AO and Joe HATTORI
 
 # Usage: outside the current workspace
 # run `bash xxx/scripts/transfer.sh src-dir tar-dir`
@@ -9,15 +9,6 @@
 [[ $# -ne 2 ]] && echo "Both source and target directory are required." && exit 1
 [[ ! -d $1 ]] && echo "$1 is not a valid directory." && exit 1
 [[ ! -d $2 ]] && echo "$2 is not a valid directory." && exit 1
-
-# check git status
-trap "popd > /dev/null 2>&1" 1
-for dir in $@; do
-    pushd $dir > /dev/null 2>&1
-    [[ `git status --porcelain | wc -l` -ne 0 ]] && echo "$dir should be clean." && exit 1
-    popd > /dev/null 2>&1
-done
-trap - 1
 
 # start copying
 pushd $1 > /dev/null 2>&1
