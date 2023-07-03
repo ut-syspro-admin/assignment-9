@@ -13,7 +13,7 @@ Syscall & scheduler.
 
 - Slide: [here](https://docs.google.com/presentation/d/1lk8QC_ammS0Fb11M_V0cVsa43VWK3Z21b595WeApmeM/edit?usp=sharing) (ECCS email required) 
 - Date assigned: ***2023/06/19***
-- Date due: ***2023/07/03 23:59*** (tentative)
+- Date due: <del>***2023/07/03 23:59***</del> <ins>***2023/07/10 23:59***</ins> (tentative)
 
 ## Notes
 
